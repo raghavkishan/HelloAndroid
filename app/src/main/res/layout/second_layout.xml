@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:textEditSuggestionItemLayout="@string/suggest_Entername"
-        android:ems="10"
-        android:id="@+id/Enter_your_name" />
-
+        android:id="@+id/Enter_your_name"
+        android:hint="@string/hint_message"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click to Display Button"
+        android:text="@string/button_text"
         android:id="@+id/click_button_name"
-        android:layout_gravity="center_horizontal"
-        android:onClick="Showname"/>
-
+        android:onClick="Showname"
+        android:layout_toRightOf="@+id/Enter_your_name"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/Display_name"/>
+        android:id="@+id/Display_name"
+        android:layout_below="@+id/Enter_your_name"
+        />
 
-
-</LinearLayout>
+</RelativeLayout>
