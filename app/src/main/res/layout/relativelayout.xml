@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Fist_name"
+            android:hint="@string/First_name"
+            android:layout_alignparentleft="true"
+            android:layout_toLeftOf="@+id/Last_name"
+            />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Last_name"
+            android:hint="@string/Last_name"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Last_name"
+            android:text="Save"
+            android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

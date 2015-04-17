@@ -28,9 +28,18 @@
         android:layout_height="wrap_content"
         android:text="Open Third Activity"
         android:id="@+id/button2_for_greetings"
-        android:onClick="showGreetings"
+        android:onClick="showdata1"
         android:layout_below="@+id/button1_for_greetings"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2_for_greetings"
+        android:id="@+id/button2_edit_text"
+        android:hint="@string/Enter_data"
+
+        />
 </RelativeLayout>

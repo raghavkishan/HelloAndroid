@@ -7,11 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
     TextView textview;
+    public final static String thirdmessage_key="thirdmessagekey";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
         textview = (TextView)findViewById(R.id.greetings_text_view);
     }
 
-    public void showGreetings(View view)
+/*  public void showGreetings(View view)
     {
         String button_text;
         button_text = ((Button) view).getText().toString();
@@ -33,10 +35,18 @@ public class MainActivity extends ActionBarActivity {
             Intent intent = new Intent(this, ThirdActivity.class);
             startActivity(intent);
         }
+    }*/
+
+    public void showdata1(View view)
+    {
+        String message1;
+        TextView textView1;
+        textView1=(EditText)findViewById(R.id.button2_edit_text);
+        message1=textView1.getText().toString();
+        Intent intent=new Intent(this,ThirdActivity.class);
+        intent.putExtra(thirdmessage_key,message1);
+        startActivity(intent);
     }
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
